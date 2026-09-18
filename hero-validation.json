@@ -1,0 +1,13 @@
+{
+  "htmlAssets": "passed",
+  "materialChecksums": 36,
+  "visualReview": [
+    "living room 1920x1080",
+    "4K viewport 3840x2160",
+    "bedroom 1920x1080",
+    "mobile 390x844"
+  ],
+  "consoleErrorsObserved": 0,
+  "frameRateBenchmark": "not measured",
+  "sourceBaseline": "2d4c7e936107be1b809c59eb87609416bbebb6ff"
+}

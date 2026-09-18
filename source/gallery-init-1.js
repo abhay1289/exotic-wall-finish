@@ -1,0 +1,1 @@
+if(new URLSearchParams(location.search).has('embed') || (function(){ try{ return window.parent && window.parent !== window; }catch(e){ return true; } })()) document.documentElement.classList.add('embed');

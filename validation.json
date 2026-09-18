@@ -1,0 +1,15 @@
+{
+  "original_html_bytes": 674645,
+  "new_html_bytes": 12130,
+  "asset_http_checks": 107,
+  "missing_references": [],
+  "original_unchanged": true,
+  "browser_verified": [
+    "hero room",
+    "catalogue photography and scroll page turns",
+    "gallery photography",
+    "cross-origin catalogue loading"
+  ],
+  "performance_note": "No production timing or frame-rate claim; GitHub deployment and Aura preview verification are pending.",
+  "validation_scope": "local asset package and cross-origin simulation"
+}

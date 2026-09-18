@@ -1,0 +1,366 @@
+{
+  "license": "CC0-1.0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "material": "linen",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rough_linen/rough_linen_diff_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/rough_linen",
+      "sourceSha256": "dca61aacd6cf3194681070cede3c16a3b61a32cb3eef5bf4c52db698b2286d3d",
+      "variants": [
+        {
+          "file": "linen-color-1024.webp",
+          "width": 1024,
+          "height": 1026,
+          "bytes": 262446,
+          "sha256": "31c528d8fd66234006299cf5c6fcc0dd34ec2f3e7af786fc62c0b996095e3cce"
+        },
+        {
+          "file": "linen-color-2048.webp",
+          "width": 2048,
+          "height": 2053,
+          "bytes": 1183712,
+          "sha256": "923ee3d11599c3e75fc41fb659c7cbda6dce2c4dabd96568ee10cc6202736372"
+        },
+        {
+          "file": "linen-color-4096.webp",
+          "width": 4096,
+          "height": 4105,
+          "bytes": 3319066,
+          "sha256": "a8c60f6c971534a84dc4aad76ff06b8e20d9b290982dd3037600166591c18c90"
+        }
+      ]
+    },
+    {
+      "material": "linen",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rough_linen/rough_linen_nor_gl_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/rough_linen",
+      "sourceSha256": "1a591b2acd7e61f3511e483a731c5f18847cce36ec501d669b853b30c203d422",
+      "variants": [
+        {
+          "file": "linen-normal-1024.webp",
+          "width": 1024,
+          "height": 1026,
+          "bytes": 518650,
+          "sha256": "eec9e2b17ef3217e1382caabe5d99dbfd6f3a7aa896b0e969f5e26970ef0f30d"
+        },
+        {
+          "file": "linen-normal-2048.webp",
+          "width": 2048,
+          "height": 2053,
+          "bytes": 1942314,
+          "sha256": "3b898137bcfb04033b83979210903cf8247a317a7c11e3444436d229c0c44cfa"
+        },
+        {
+          "file": "linen-normal-4096.webp",
+          "width": 4096,
+          "height": 4105,
+          "bytes": 5458108,
+          "sha256": "2895fb85c81e6e08239743236dfd3d34b2b8eaad074c4bb2b68e92a4fd81cd3c"
+        }
+      ]
+    },
+    {
+      "material": "linen",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rough_linen/rough_linen_rough_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/rough_linen",
+      "sourceSha256": "f94c35b6ddf1560783d3cd450810ebe4452a49028d562ce140b3e253b2bbf0b3",
+      "variants": [
+        {
+          "file": "linen-roughness-1024.webp",
+          "width": 1024,
+          "height": 1026,
+          "bytes": 466020,
+          "sha256": "ba368ef462e5c32899db510c0b66dee3bb5665b9115e51fe911bbfed0fa7d9c4"
+        },
+        {
+          "file": "linen-roughness-2048.webp",
+          "width": 2048,
+          "height": 2053,
+          "bytes": 2039730,
+          "sha256": "46c74ad72294865876e0afecce1bf6a9e85604212644cbe9ce50cdd7d62f1ac8"
+        },
+        {
+          "file": "linen-roughness-4096.webp",
+          "width": 4096,
+          "height": 4105,
+          "bytes": 7736930,
+          "sha256": "42c4fde2c19b9afe27dda267387af0563eb80576968eb376ec6bd6b9a1211bdd"
+        }
+      ]
+    },
+    {
+      "material": "leather",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brown_leather/brown_leather_albedo_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/brown_leather",
+      "sourceSha256": "0f126e18988acac12ec9489faa300507bf4d274dbde3c3447296d210b7561b4a",
+      "variants": [
+        {
+          "file": "leather-color-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 183754,
+          "sha256": "2dd8487d8e082ce4f8d6b48018d1550c44a3365d12a89d4b2c925cdb5d615477"
+        },
+        {
+          "file": "leather-color-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 842220,
+          "sha256": "1b57894b57989e58f821758241d7d9e4ed79abf97907cb3256900cedfe04f52c"
+        },
+        {
+          "file": "leather-color-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 2789374,
+          "sha256": "23bcc4bc5ad1ab7d9f30c8833ea2cd7fa4b17fa369fff0f72e5b8e4019d657f0"
+        }
+      ]
+    },
+    {
+      "material": "leather",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brown_leather/brown_leather_nor_gl_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/brown_leather",
+      "sourceSha256": "d006853ae07c4a5e1edb2369bb35205f9a297cff785a5ff8117a5fe631668a12",
+      "variants": [
+        {
+          "file": "leather-normal-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 408334,
+          "sha256": "969cf414d5d99943e52db90685d53dae60b2fd908d4e5c5e3b9813aae63da15f"
+        },
+        {
+          "file": "leather-normal-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 1514758,
+          "sha256": "eb22eb383962ffe4274d9cc1373198bac0d60c2893b97831fd6ea05af691480c"
+        },
+        {
+          "file": "leather-normal-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 4286616,
+          "sha256": "bdc0317f5f9a0f82351b1a6534bd69ef09a89fea52eb545342f2d567523389b0"
+        }
+      ]
+    },
+    {
+      "material": "leather",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/brown_leather/brown_leather_rough_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/brown_leather",
+      "sourceSha256": "b8c97b6f150ff3ef36b66bfbb9859618a5fd385b1c23b9821233a838b4e8d126",
+      "variants": [
+        {
+          "file": "leather-roughness-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 508788,
+          "sha256": "f82ad91f5557973ef3a1f21df1971991bb267e375bfc5dc6453a54c12c11f71d"
+        },
+        {
+          "file": "leather-roughness-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 2053400,
+          "sha256": "1322232d8b5951e3ba9eac93a3e77e114702ba4b8915baa74330addf304826ad"
+        },
+        {
+          "file": "leather-roughness-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 7045998,
+          "sha256": "382db2a13ef8014105a93cccdf4a410f266003dd06d9f48aa996ed61e9d8b3b3"
+        }
+      ]
+    },
+    {
+      "material": "walnut",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_diff_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/natural_walnut_veneer",
+      "sourceSha256": "dcdb564c322f6e5d354fcb539ec7a2bd3637c85a0dfd52a68a4baf641883d7dd",
+      "variants": [
+        {
+          "file": "walnut-color-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 123352,
+          "sha256": "f8fca19ea39f077775d764f24cd1fc0bbe7b8a5d2c91304e6f7e998fd7d3ce04"
+        },
+        {
+          "file": "walnut-color-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 462656,
+          "sha256": "f9b9d27111832e358ed9abbfaf58d95c2d5972f229b03732181c851f1620a364"
+        },
+        {
+          "file": "walnut-color-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 1735472,
+          "sha256": "e2b19169ff2db3ecff9f2b1015550b35079e540ef5123eb37ae03744666d4d1b"
+        }
+      ]
+    },
+    {
+      "material": "walnut",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_nor_gl_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/natural_walnut_veneer",
+      "sourceSha256": "79559ce0ae4549c4eddedb87861da04d5fb6bf299d1ce1ec537248c7170876d0",
+      "variants": [
+        {
+          "file": "walnut-normal-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 103112,
+          "sha256": "871541fd1f94471017e18f7a1f47173968e4389a76f64cb35c5b5899a99fce8f"
+        },
+        {
+          "file": "walnut-normal-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 451982,
+          "sha256": "0c79d8cd52027826e894ef67fe0579d688fef758a7bbc67a26529a28f47d3ead"
+        },
+        {
+          "file": "walnut-normal-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 1803370,
+          "sha256": "4daef076575b6ab75d8dcf028f92889b4e5743bdaa866795f7f1c5c84cb6bb2e"
+        }
+      ]
+    },
+    {
+      "material": "walnut",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_rough_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/natural_walnut_veneer",
+      "sourceSha256": "417c316be46fde0ff7ed033d69be1fb3c4bd8e99046b6dd2284bb4c67f41f5e4",
+      "variants": [
+        {
+          "file": "walnut-roughness-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 119882,
+          "sha256": "9e35549b15fb8291b0de290563a00b496fd02a92182624ce2ed1da81acfac592"
+        },
+        {
+          "file": "walnut-roughness-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 549784,
+          "sha256": "34beb4c65ccebbba635259f7f03c05e944f0b2817e7e8a6054861eaf34232f46"
+        },
+        {
+          "file": "walnut-roughness-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 2041860,
+          "sha256": "5b6b888f1532d8b56728058cdb4493b15cb52a348a18480bcced081b8407f237"
+        }
+      ]
+    },
+    {
+      "material": "floor",
+      "channel": "color",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plank_flooring_03/plank_flooring_03_diff_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/plank_flooring_03",
+      "sourceSha256": "a00871c0ea73ec8d01c7e3a608005198c8a5bc3db092a788251add0fa26459a3",
+      "variants": [
+        {
+          "file": "floor-color-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 239846,
+          "sha256": "538512b91a1407ca534297fd21ca5154e6eb2ab7ec3f7eb3621723803374f5e1"
+        },
+        {
+          "file": "floor-color-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 948734,
+          "sha256": "53216c1a27c4aedefefbb360df7a0e9837e94d02872faa43710e329cffac2aaf"
+        },
+        {
+          "file": "floor-color-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 3820712,
+          "sha256": "fd831eacfd4f7968e455d89135d20234dc744d76c5560d4aae814bea73e34629"
+        }
+      ]
+    },
+    {
+      "material": "floor",
+      "channel": "normal",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plank_flooring_03/plank_flooring_03_nor_gl_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/plank_flooring_03",
+      "sourceSha256": "2790d71a5192e03b6c02d917a4283e57dce63e1f09b0b1cbd0d9a06373c62652",
+      "variants": [
+        {
+          "file": "floor-normal-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 359174,
+          "sha256": "bd8d6c68699146848412ee8d1ef2a27425f63dd39e239f323d19fd7204a72676"
+        },
+        {
+          "file": "floor-normal-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 1810994,
+          "sha256": "1d3fd0bfb5609074a30e48753d13d90cc9848b9bc012bcd0dda801a0fa45f0cd"
+        },
+        {
+          "file": "floor-normal-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 8351646,
+          "sha256": "00ae2f3c10826b766fc2a1b105a4dc0169b7f2eaa55175bae9e35ca6b227a8c4"
+        }
+      ]
+    },
+    {
+      "material": "floor",
+      "channel": "roughness",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plank_flooring_03/plank_flooring_03_rough_4k.jpg",
+      "assetPage": "https://polyhaven.com/a/plank_flooring_03",
+      "sourceSha256": "55c5e797871adf4d14e99326df57dd15ce8739445683874e5725bb32dae7cba2",
+      "variants": [
+        {
+          "file": "floor-roughness-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 56982,
+          "sha256": "d15dfe647f8baca287c2a58d94dfaeb0ddce2e79e4861924728a023b215a7868"
+        },
+        {
+          "file": "floor-roughness-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 267232,
+          "sha256": "bd95555df0b87eae6417c6efec7624ec484e1b46f129d764d556f23db67d99fb"
+        },
+        {
+          "file": "floor-roughness-4096.webp",
+          "width": 4096,
+          "height": 4096,
+          "bytes": 1494092,
+          "sha256": "0970e6e8bd217b9312096459d116046b19a15988479bfb097cb3bd03c1b5584b"
+        }
+      ]
+    }
+  ]
+}

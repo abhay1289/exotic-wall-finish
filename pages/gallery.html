@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Exotic — Works</title>
+<!--
+  MØBEL · Spaces
+  The wave-strip "Featured" gallery, adapted to the MØBEL art direction: ivory ground,
+  Inter + Instrument Serif, Unsplash interiors on the cards instead of drawn screenshots.
+
+  · Open with `?embed` when it sits inside the site.  The top bar is hidden (the site has
+    its own nav), vertical wheel / touch scroll passes through to the host page, and only
+    horizontal input (trackpad deltaX, shift+wheel, drag, arrow keys) drives the strip.
+  · window.__dbg: pause(v) · state() · jump(i) · open(i) · close() · mode('featured'|'full')
+-->
+<link rel="stylesheet" href="../assets/css/fonts-main.css">
+<script src="../assets/js/gallery-init-1.js"></script>
+<link rel="stylesheet" href="../assets/css/gallery.css">
+<link rel="stylesheet" href="../assets/css/exotic.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="labels"></div>
+
+<div id="full"><div id="fullList"></div></div>
+<div id="thumb"><img alt="" decoding="async"></div>
+
+<div id="scrim"></div>
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Space">
+  <button id="sheetClose" aria-label="Close">✕</button>
+  <div id="sheetScroll">
+    <div class="sInfo">
+      <div class="eyebrow">Works / <span class="sIdx">01</span></div>
+      <h1></h1><p></p>
+      <div class="pills">
+        <span class="pill dark">↗</span>
+        <span class="pill t1">Miami</span>
+        <span class="pill t2">2026</span>
+      </div>
+      <h5>In this finish</h5>
+      <ul class="pieces"></ul>
+    </div>
+    <div class="sMedia"></div>
+  </div>
+</div>
+
+<div class="chrome">
+  <div class="bar top">
+    <span class="mono brand">EXOTIC</span>
+    <span class="mono sub">Works</span>
+  </div>
+  <div class="bar bot">
+    <span class="seg">
+      <button class="navbtn on" id="tabFeatured">Featured</button>
+      <span class="slash mono">/</span>
+      <button class="navbtn" id="tabFull">Index</button>
+    </span>
+    <span class="mono hint" id="counter"><em>01</em> / 14</span>
+  </div>
+</div>
+
+<div id="vig"></div>
+<div id="grain"></div>
+
+<script type="module" src="../assets/js/gallery-LNH5V7HM.js"></script>
+</body>
+</html>
