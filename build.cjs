@@ -38,5 +38,14 @@ const out = __dirname;
     if (!/^(main|catalog|gallery|shared)-[A-Z0-9]+\.js(?:\.map)?$/.test(file)) continue;
     if (!keep.has(file) && !keep.has(file.replace(/\.map$/, ''))) fs.unlinkSync(path.join(jsDir, file));
   }
+  if (process.env.VERCEL) {
+    const pub = path.join(work, 'public');
+    fs.rmSync(pub, { recursive: true, force: true });
+    fs.mkdirSync(pub, { recursive: true });
+    for (const item of ['index.html', '.nojekyll', 'assets', 'pages', 'licenses']) {
+      const from = path.join(work, item);
+      if (fs.existsSync(from)) fs.cpSync(from, path.join(pub, item), { recursive: true });
+    }
+  }
   console.log('Built three shared 3D modules, initialization scripts, and static CSS.');
 })();
