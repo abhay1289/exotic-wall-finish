@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+  MØBEL — Collection 2026  ·  an interactive furniture lookbook in three.js
+  ------------------------------------------------------------------------
+  Adapted from "The Book of Japan" reader.  The engine is unchanged:
+  · One WebGL scene: linen boards, the page block, the fore-edge stack and
+    the turning leaf.  Pages are painted at runtime into canvas textures.
+  · The page turn is an analytic curl: the leaf wraps onto a cylinder whose
+    axis — the fold line — sweeps across the paper.
+  · Every texture is drawn at device resolution; paper tooth is laid down
+    1:1 with texels so nothing softens.
+  · Responsive: a two-page spread on wide screens, one page at a time on
+    narrow ones (the camera pans across the gutter).
+  · Drag a leaf either way, flick it, tap either side, use ← →, the
+    scrubber, or the wheel.
+
+  What changed for MØBEL:
+  · Section 1 is now a content spec: an IMAGES manifest (drop your own
+    photography into ./assets/mobel/ with the listed file names, or pass a
+    URL map through window.MOBEL_CONFIG), the editorial COPY, and PAGES —
+    one small painter per page, laid out on a shared grid.
+  · Photographs that are missing are stood in for by procedural
+    placeholders drawn at boot, so the book always renders.
+  · Cream paper, a linen board, and a contemporary type pairing
+    (Inter Tight / Instrument Serif) replace the dark essay edition.
+
+  Embedding (added for the MØBEL site):
+  · Open with `?embed` when the book sits inside a host page.  The chrome
+    switches to the site's ivory palette, the mouse wheel is left to the
+    host so the page keeps scrolling, and the back pill posts
+    `mobel-book:back` to the parent.  Everything else is untouched.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Exotic — Finishes 2026</title>
+<meta name="description" content="Exotic Finishes 2026 — Venetian plaster, Marmorino and lime wash lookbook.">
+<meta name="theme-color" content="#efebe4">
+<!--MOBEL_CONFIG-->
+<script src="../assets/js/catalog-init-1.js"></script>
+<link rel="stylesheet" href="../assets/css/fonts-catalog.css">
+<link rel="stylesheet" href="../assets/css/catalog.css">
+<link rel="stylesheet" href="../assets/css/exotic.css">
+</head>
+<body>
+<div id="stage">
+  <div id="glow"></div>
+  <canvas id="gl"></canvas>
+
+  <button id="back" class="pill" aria-label="Exotic — back to the site">
+    <span class="mark">EXOTIC</span><span class="sub">Finishes 2026</span>
+  </button>
+
+  <div id="scrub" class="pill">
+    <button class="navbtn" id="prev" aria-label="Previous page">
+      <svg class="chev" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7"/></svg>
+    </button>
+    <div id="track"><div id="dot"></div></div>
+    <button class="navbtn" id="next" aria-label="Next page">
+      <svg class="chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>
+    </button>
+    <div id="label">—</div>
+  </div>
+
+  <div id="homebar"></div>
+  <div id="ring"></div>
+</div>
+<div id="boot">Preparing the finishes…</div>
+
+<script type="module" src="../assets/js/catalog-QKP2EMPW.js"></script>
+</body>
+</html>
