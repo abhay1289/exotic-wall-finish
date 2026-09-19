@@ -829,15 +829,15 @@ const maxScroll = () => Math.max(1, spacer.offsetHeight - innerHeight);
 const syncShop = () => document.body.classList.toggle('shop', scrollY > spacer.offsetHeight - 120);
 const inHeroView = () => scrollY < spacer.offsetHeight + 4;
 addEventListener('scroll', () => {
-  target = clamp(scrollY / maxScroll());
+  target = 0;
   syncShop();
   if (typeof FX === 'function') FX(false);
   if (inHeroView()) kickLoop();
   else if (glShown) { glShown = false; renderer.domElement.style.visibility = 'hidden'; applyUI(); }
 }, { passive: true });
-window.__scrollSync = () => { target = clamp(scrollY / maxScroll()); syncShop(); FX(true); };
+window.__scrollSync = () => { target = 0; syncShop(); FX(true); };
 addEventListener('mousemove', (e) => { if (REDUCE || !inHeroView()) return; mouse.x = (e.clientX / innerWidth - 0.5) * 2; mouse.y = (e.clientY / innerHeight - 0.5) * 2; }, { passive: true });
-addEventListener('resize', () => { FX(true); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); grainPass.uniforms.uTexel.value.set(1 / (innerWidth * DPR), 1 / (innerHeight * DPR)); fxaa.material.uniforms.resolution.value.set(1 / (innerWidth * DPR), 1 / (innerHeight * DPR)); forceFull = true; camera.aspect = innerWidth / innerHeight; camera.fov = innerWidth < innerHeight ? 76 : 58; camera.updateProjectionMatrix(); refl.getRenderTarget().setSize(Math.round(innerWidth * DPR * 0.5), Math.round(innerHeight * DPR * 0.5)); target = clamp(scrollY / maxScroll()); kickLoop(); });
+addEventListener('resize', () => { FX(true); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); grainPass.uniforms.uTexel.value.set(1 / (innerWidth * DPR), 1 / (innerHeight * DPR)); fxaa.material.uniforms.resolution.value.set(1 / (innerWidth * DPR), 1 / (innerHeight * DPR)); forceFull = true; camera.aspect = innerWidth / innerHeight; camera.fov = innerWidth < innerHeight ? 76 : 58; camera.updateProjectionMatrix(); refl.getRenderTarget().setSize(Math.round(innerWidth * DPR * 0.5), Math.round(innerHeight * DPR * 0.5)); target = 0; kickLoop(); });
 camera.fov = innerWidth < innerHeight ? 76 : 58; camera.updateProjectionMatrix();
 
 function flickerOn(t) { return sstep(t); }   // lamps warm up smoothly; the strobing switch-on is gone
@@ -997,12 +997,11 @@ function frame() {
   if (heroOn !== glShown) { glShown = heroOn; renderer.domElement.style.visibility = heroOn ? '' : 'hidden'; }
   if (!heroOn && frames >= 2) { applyUI(); return; }
   const dt = Math.min(clock.getDelta(), 0.05);
-  cur += (target - cur) * (1 - Math.exp(-dt * 8));
-  if (Math.abs(target - cur) < 0.0001) cur = target;
+  cur = 0;
   if (REDUCE) { mcur.x = mcur.y = 0; }
   else { mcur.x += (mouse.x - mcur.x) * (1 - Math.exp(-dt * 3)); mcur.y += (mouse.y - mcur.y) * (1 - Math.exp(-dt * 3)); }
-  render(cur, REDUCE ? 0 : clock.elapsedTime);
-  if (heroOn || Math.abs(target - cur) > 0.0001) raf = requestAnimationFrame(frame);
+  render(0, REDUCE ? 0 : clock.elapsedTime);
+  raf = requestAnimationFrame(frame);
 }
 addEventListener('visibilitychange', () => { if (!document.hidden) kickLoop(); });
 /* ── scroll-linked motion for everything below the hero (transforms + clip only) ── */
@@ -1046,11 +1045,7 @@ let lastShadowP = -1;
 let lastSig = '', forceFull = true, lastGrainInput = null;
 { const gr = grainPass.render.bind(grainPass); grainPass.render = function (rd, wb, rb, dt, mask) { lastGrainInput = rb; gr(rd, wb, rb, dt, mask); }; }
 function render(prog, time) {
-  const p = clamp(prog / F), tour = clamp((prog - F) / (1 - F));
-  applyItems(p, tour);
-  applyLights(p, tour);
-  applyCamera(p, tour);
-  applyUI();
+  applyCamera(0, 0); applyUI();
   grainPass.uniforms.uTime.value = time;
   grainPass.uniforms.uAmt.value = REDUCE ? 0 : 0.007;
   if (Math.abs(prog - lastShadowP) > 0.00002) { renderer.shadowMap.needsUpdate = true; lastShadowP = prog; }
@@ -1069,6 +1064,7 @@ if (Q.has('p')) { const p = clamp(Number(Q.get('p'))); requestAnimationFrame(() 
 if (Q.has('nomouse')) { addEventListener('mousemove', (e) => { mouse.x = mouse.y = 0; }, true); }
 renderer.domElement.dataset.materialSize=String(materialSize);renderer.domElement.dataset.quality=quality4k?'4k':'adaptive';
 mark('scene');
+if (!Q.has('furnish')) stageB.splice(0, Math.max(0, stageB.length - 1));
 while (stageB.length > 1) runStage(); mark('stages');
 warmUp().then(() => { mark('compile'); const slow = (_T.compile - _T.stages) > 1400 || _T.compile > 7000; if (slow) { stageB.length = 0; if (!quality4k && DPR > 1) { dropped = true; DPR = 1; renderer.setPixelRatio(1); composer.setPixelRatio(1); composer.setSize(innerWidth, innerHeight); grainPass.uniforms.uTexel.value.set(1 / innerWidth, 1 / innerHeight); fxaa.material.uniforms.resolution.value.set(1 / innerWidth, 1 / innerHeight); } console.info('MØBEL: slow device, lighter path'); } else runStage(); mark('bake'); kickLoop(); setTimeout(saveTexCache, 4000); });
 }
